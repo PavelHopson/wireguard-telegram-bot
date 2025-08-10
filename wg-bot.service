@@ -1,0 +1,12 @@
+[Unit]
+Description=WireGuard Telegram Bot
+After=network.target
+
+[Service]
+User=root
+Environment=WG_BOT_TOKEN=PLACEHOLDER_BOT_TOKEN
+ExecStart=/usr/bin/python3 /root/bot.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
