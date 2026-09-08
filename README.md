@@ -1,13 +1,38 @@
-# WireGuard VPN Telegram Bot
+# WireGuard Telegram Bot
 
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![aiogram](https://img.shields.io/badge/aiogram-2.25-009688?style=flat-square&logo=telegram&logoColor=white)](https://docs.aiogram.dev/)
-[![WireGuard](https://img.shields.io/badge/WireGuard-VPN-88171A?style=flat-square&logo=wireguard&logoColor=white)](https://www.wireguard.com/)
-[![License: MIT](https://img.shields.io/github/license/PavelHopson/wireguard-telegram-bot?style=flat-square)](LICENSE)
+![WireGuard Telegram Bot: Запрос → Доступ → Конфигурация](docs/assets/repository-cover.svg)
 
-Telegram-бот для автоматической раздачи VPN-конфигов (WireGuard) с поддержкой ПК и мобильных устройств. Позволяет генерировать конфигурации, отправлять QR-коды и управлять VPN прямо из Telegram.
+**Telegram-бот.** Бот доставки WireGuard-конфигураций и взаимодействия с пользователями сервиса.
 
----
+<!-- repository-guide:start -->
+[Первый запуск](#readme-start) · [Что внутри](#readme-map) · [Путеводитель](docs/repository-guide.md#start) · [Карта кода](docs/repository-guide.md#map) · [Проверки](docs/repository-guide.md#checks) · [Границы и права](docs/repository-guide.md#boundaries)
+
+<a id="readme-map"></a>
+
+## Проект за минуту
+
+- **[Telegram-диалог](<bot.py>)** — Обработка запросов пользователя и доставка конфигураций.
+- **[Provisioning](<add_client.sh>)** — Системная операция добавления клиента; не запускать при простом просмотре.
+- **[Python-среда](<requirements.txt>)** — Зависимости бота для отдельного окружения.
+
+<a id="readme-start"></a>
+
+## Начать локально
+
+**Среда:** Python; отдельный WireGuard-сервер для рабочего запуска. **Источник:** [requirements.txt](<requirements.txt>).
+
+Сначала прочитайте `bot.py` и требования окружения. Установка WireGuard и `add_client.sh` меняют систему: они не входят в безопасный просмотр проекта. Токен и клиентские ключи остаются вне Git.
+
+<details>
+<summary><strong>Перед первым запуском и изменением кода</strong></summary>
+
+- Команды сверены с исходниками 8 сентября 2026. Это инструкция, а не отметка об успешном запуске или текущем production.
+- Установка зависимостей может обращаться в registry и выполнять lifecycle scripts. Используйте отдельную рабочую среду и демонстрационные данные.
+- Конфигурации содержат секреты. Не публикуйте клиентские файлы, токены, журналы переписки и адреса закрытой инфраструктуры.
+
+
+</details>
+<!-- repository-guide:end -->
 
 ## Возможности
 
