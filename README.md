@@ -1,5 +1,9 @@
 # WireGuard Telegram Bot
 
+<!-- project-links:start -->
+[Документация](docs/repository-guide.md) · [Код](https://github.com/PavelHopson/wireguard-telegram-bot/tree/main) · [История изменений](https://github.com/PavelHopson/wireguard-telegram-bot/commits/main/)
+<!-- project-links:end -->
+
 ![WireGuard Telegram Bot: Запрос → Доступ → Конфигурация](docs/assets/repository-cover.svg)
 
 **Telegram-бот.** Бот доставки WireGuard-конфигураций и взаимодействия с пользователями сервиса.
